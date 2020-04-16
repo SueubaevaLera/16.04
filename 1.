@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+int arr[] = {500,200,100,50,20,10};
+int k,n,s;
+cout <<"Input:";
+cin>> n;
+s=0;
+for (int i=0;i<6;i++){
+k=arr[i];
+s+=n/k;
+n%=k;
+}
+if(n>0){
+s=-1;
+}
+cout << "Output:"<< s;
+return 0;
+}
