@@ -1,0 +1,25 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+int main()
+{
+    int z,li,ri,summ=0,aud;
+    aud=0;
+    cout<<"Input:";
+    cin >> z;
+    vector <int> b(100000000);
+    for (int i=0;i<z;i++){
+        cin >> li >> ri;
+        b[li]=b[li]+1;
+        b[ri]= b[ri]-1;
+    }
+    for (int i=0;i<10000000;i++){
+        summ=summ+b[i];
+        if(summ>aud){
+                aud=summ;
+        }
+    }
+    cout <<"Output:"<< aud;
+    return 0;
+}
