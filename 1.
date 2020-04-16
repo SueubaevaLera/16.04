@@ -10,7 +10,7 @@ cin>> n;
 s=0;
 for (int i=0;i<6;i++){
 k=arr[i];
-s+=n/k;
+s=s+n/k;
 n%=k;
 }
 if(n>0){
